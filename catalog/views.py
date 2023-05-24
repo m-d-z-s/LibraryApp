@@ -140,13 +140,13 @@ class AuthorDelete(DeleteView):
 
 class BookCreate(PermissionRequiredMixin, CreateView):
     model = Book
-    fields = ['title', 'author', 'summary', 'isbn', 'genre', 'language']
+    fields = '__all__'
     permission_required = 'catalog.can_mark_returned'
 
 
 class BookUpdate(PermissionRequiredMixin, UpdateView):
     model = Book
-    fields = ['title', 'author', 'summary', 'isbn', 'genre', 'language']
+    fields = '__all__'
     permission_required = 'catalog.can_mark_returned'
 
 
